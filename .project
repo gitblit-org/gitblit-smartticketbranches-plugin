@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>gitblit-smartticketbranches-plugin</name>
-	<comment>Remove ticket branches on close and create them on re-open</comment>
+	<comment>Remove the ticket's branch when it is closed, create the branch when it is re-opened</comment>
 	<projects>
 	</projects>
 	<buildSpec>

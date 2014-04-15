@@ -2,7 +2,22 @@
 
 *REQUIRES 1.5.0*
 
-The Gitblit Smart Ticket Branches plugin deletes the *ticket/N* branches when a ticket is closed and recreates them if a ticket is re-opened.
+The Gitblit Smart Ticket Branches plugin provides tools to automatically cleanup closed ticket branches.
+
+1. A ticket hook to delete the *ticket/N* branch on closing a ticket and to re-create it on re-opening a ticket
+2. An SSH command to cleanup closed ticket branches
+
+### Usage
+
+#### Ticket Hook
+
+The ticket hook is automatic.  Just install the plugin and the hook will manage your ticket branches for you automatically.
+
+#### SSH Command
+
+The SSH command requires administrator permissions.
+
+    ssh host stb cleanup ALL|&lt;REPOSITORY&gt; [--dryRun]
 
 ### Building against a Gitblit RELEASE
 
