@@ -54,8 +54,8 @@ import com.google.common.collect.Maps;
 public class SmartTicketBranchesDispatcher extends DispatchCommand {
 
 	@Override
-	protected void setup(UserModel user) {
-		register(user, CleanupCommand.class);
+	protected void setup() {
+		register(CleanupCommand.class);
 	}
 
 	@CommandMetaData(name = "cleanup", description = "Remove ticket branches for closed tickets", admin = true)
