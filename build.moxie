@@ -10,7 +10,7 @@ name: gitblit-smartticketbranches-plugin
 description: Remove the ticket's branch when it is closed, create the branch when it is re-opened
 groupId: com.gitblit.plugin
 artifactId: SmartTicketBranches
-version: 1.0.0
+version: 1.0.1-SNAPSHOT
 packaging: zip
 inceptionYear: 2014
 organization: gitblit.com
