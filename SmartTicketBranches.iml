@@ -15,9 +15,7 @@
           <root url="jar://$MODULE_DIR$/ext/gitblit-1.5.0.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="jar://$MODULE_DIR$/ext/src/gitblit-1.5.0.jar!/" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
