@@ -12,7 +12,7 @@ The Gitblit Smart Ticket Branches plugin provides tools to automatically cleanup
 This plugin is referenced in the Gitblit Plugin Registry and you may install it using SSH with an administrator account.
 
     ssh host plugin refresh
-    ssh host plugin install SmarkTicketBranches
+    ssh host plugin install SmartTicketBranches
     ssh host plugin ls
 
 Alternatively, you can download the zip from [here](http://plugins.gitblit.com) manually copy it to your `${baseFolder}/plugins` directory.
