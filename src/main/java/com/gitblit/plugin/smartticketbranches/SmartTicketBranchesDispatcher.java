@@ -165,8 +165,7 @@ public class SmartTicketBranchesDispatcher extends DispatchCommand {
 
 					// apply all queued branch deletions
 					if (!batch.getCommands().isEmpty()) {
-						RevWalk rw = new RevWalk(db);
-						try {
+						try (RevWalk rw = new RevWalk(db)) {
 							batch.execute(rw, NullProgressMonitor.INSTANCE);
 							for (ReceiveCommand cmd : batch.getCommands()) {
 								switch (cmd.getResult()) {
@@ -184,8 +183,6 @@ public class SmartTicketBranchesDispatcher extends DispatchCommand {
 				    				break;
 				    			}
 							}
-						} finally {
-							rw.release();
 						}
 					}
 				} catch (IOException e) {

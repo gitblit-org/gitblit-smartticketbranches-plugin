@@ -84,9 +84,7 @@ public class SmartTicketBranchesHook extends TicketHook {
     				ru.setExpectedOldObjectId(ObjectId.zeroId());
     				ru.setNewObjectId(ObjectId.fromString(ps.tip));
 
-    				RevWalk rw = null;
-    				try {
-    					rw = new RevWalk(repo);
+    				try (RevWalk rw = new RevWalk(repo)) {
     					RefUpdate.Result result = ru.update(rw);
     					switch (result) {
     					case NEW:
@@ -97,10 +95,6 @@ public class SmartTicketBranchesHook extends TicketHook {
     						log.error(String.format("%s failed to re-create %s:%s (%s)",
     								name, ticket.repository, branch, result));
     						break;
-    					}
-    				} finally {
-    					if (rw != null) {
-    						rw.release();
     					}
     				}
     			}
